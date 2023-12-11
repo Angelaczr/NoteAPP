@@ -41,9 +41,15 @@ const Pilihan = ({ label, datas, width, height, fontSize, selectedValue, onValue
                             <SelectDragIndicatorWrapper borderWidth={"$1"} borderRadius={"$sm"}>
                                 <SelectDragIndicator />
                             </SelectDragIndicatorWrapper>
+<<<<<<< HEAD
                             {datas.map((data, index) => (
                                 <SelectItem key={index} label={data} value={data} />
                             ))}
+=======
+                            <SelectItem label={"Dummy"} value={null} />
+                            <SelectItem label={"Dummy"} value={null} />
+                            <SelectItem label={"Dummy"} value={null} />
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                         </SelectContent>
                     </SelectPortal>
                 </Select>

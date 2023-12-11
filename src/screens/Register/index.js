@@ -8,6 +8,7 @@ import {
     ModalBackdrop,
     AlertText,
 } from "@gluestack-ui/themed";
+<<<<<<< HEAD
 import { Input, Button } from "../../components";
 import { registerUser } from "../../actions/AuthAction";
 import BackFAB from "../../components/kecil/back_fab";
@@ -49,6 +50,12 @@ const Register = ({ navigation }) => {
         }
     };
 
+=======
+import { Input, Button } from "../../components/kecil";
+import BackFAB from "../../components/kecil/back_fab";
+
+const Register = ({ navigation }) => {
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
     return (
         <Box flex={1} backgroundColor="$blue400" justifyContent="center">
             <BackFAB />
@@ -73,28 +80,48 @@ const Register = ({ navigation }) => {
                 <FormControl>
                     <Input
                         label="Nama"
+<<<<<<< HEAD
                         value={nama}
                         onChangeText={(nama) => setNama(nama)}
+=======
+                        value={null}
+                        onChangeText={() => { }}
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                         height={"$10"}
                     />
                     <Input
                         label="Email"
+<<<<<<< HEAD
                         value={email}
                         onChangeText={(email) => setEmail(email)}
+=======
+                        value={null}
+                        onChangeText={() => { }}
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                         height={"$10"}
                     />
                     <Input
                         label="No. Handphone"
                         keyboardType="phone-pad"
+<<<<<<< HEAD
                         value={nohp}
                         onChangeText={(nohp) => setNohp(nohp)}
+=======
+                        value={null}
+                        onChangeText={() => { }}
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                         height={"$10"}
                     />
                     <Input
                         label="Password"
                         secureTextEntry
+<<<<<<< HEAD
                         value={password}
                         onChangeText={(password) => setPassword(password)}
+=======
+                        value={null}
+                        onChangeText={() => { }}
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                         height={"$10"}
                     />
                 </FormControl>
@@ -106,11 +133,16 @@ const Register = ({ navigation }) => {
                         padding={"$3"}
                         fontSize={"$md"}
                         onPress={() => {
+<<<<<<< HEAD
                             onRegister();
+=======
+                            navigation.navigate("Login");
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                         }}
                     />
                 </Box>
             </Box>
+<<<<<<< HEAD
 
             {/* show Alert */}
             {showAlert && (
@@ -122,6 +154,8 @@ const Register = ({ navigation }) => {
                     </Alert>
                 </Modal>
             )}
+=======
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
         </Box>
     );
 };

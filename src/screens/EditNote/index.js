@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Alert, Box, Heading, Text, FormControl, Modal, ModalBackdrop, AlertText, Fab, FabLabel, FabIcon, ArrowLeftIcon, ScrollView } from "@gluestack-ui/themed";
+<<<<<<< HEAD
 import { Button, Input, Pilihan } from "../../components";
 import { editNote, getNote } from "../../actions/AuthAction";
 import BackFAB from "../../components/kecil/back_fab";
@@ -64,6 +65,12 @@ const EditNote = ({ route, navigation }) => {
         }
     };
 
+=======
+import { Button, Input, Pilihan } from "../../components/kecil";
+import BackFAB from "../../components/kecil/back_fab";
+
+const EditNote = ({ route, navigation }) => {
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
     return (
         <Box flex={1} backgroundColor="$white" justifyContent="center">
             <BackFAB />
@@ -75,10 +82,17 @@ const EditNote = ({ route, navigation }) => {
                     Having a mistake? An edit got you covered!
                 </Text>
                 <FormControl>
+<<<<<<< HEAD
                     <Input label={"Title"} width={"$full"} height={"$10"} value={title} onChangeText={(title) => setTitle(title)} />
                     <Input textarea={true} label="Content" width={"$full"} height={"$32"} value={content} onChangeText={(content) => setContent(content)} />
                     <Pilihan label="Status" value={status} selectedValue={status} onValueChange={(status) => ubahStatus(status)} />
                     <Pilihan label="Category" selectedValue={category} datas={categoryUser} onValueChange={(selectedCategory) => setCategory(selectedCategory)} />
+=======
+                    <Input label={"Title"} width={"$full"} height={"$10"} value={null} onChangeText={() => { }} />
+                    <Input textarea={true} label="Content" width={"$full"} height={"$32"} value={null} onChangeText={() => { }} />
+                    <Pilihan label="Status" value={null} selectedValue={null} onValueChange={() => { }} />
+                    <Pilihan label="Category" selectedValue={null} datas={null} onValueChange={() => { }} />
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                     <Button
                         type="text"
                         title="Update"
@@ -89,6 +103,7 @@ const EditNote = ({ route, navigation }) => {
                     />
                 </FormControl>
             </Box>
+<<<<<<< HEAD
 
             {/* show Alert */}
             {showAlert && (
@@ -100,6 +115,8 @@ const EditNote = ({ route, navigation }) => {
                     </Alert>
                 </Modal>
             )}
+=======
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
         </Box>
     );
 };

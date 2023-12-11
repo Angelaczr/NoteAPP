@@ -10,6 +10,7 @@ import {
     ModalBackdrop,
 } from "@gluestack-ui/themed";
 import { Input, Button } from "../../components";
+<<<<<<< HEAD
 import { loginUser } from "../../actions/AuthAction";
 
 const Login = ({ navigation }) => {
@@ -38,6 +39,10 @@ const Login = ({ navigation }) => {
         }
     };
 
+=======
+
+const Login = ({ navigation }) => {
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
     return (
         <Box flex={1} backgroundColor="$blue400" justifyContent="center">
             <Box
@@ -63,16 +68,26 @@ const Login = ({ navigation }) => {
                         label={"Login"}
                         width={"$full"}
                         height={"$10"}
+<<<<<<< HEAD
                         onChangeText={(text) => setEmail(text)} // Set email ke dalam state
                         value={email}
+=======
+                        onChangeText={() => { }} // Set email ke dalam state
+                        value={null}
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                     />
                     <Input
                         label="Password"
                         width={"$full"}
                         height={"$10"}
                         secureTextEntry={true}
+<<<<<<< HEAD
                         onChangeText={(text) => setPassword(text)} // Set password ke dalam state
                         value={password}
+=======
+                        onChangeText={() => { }} // Set password ke dalam state
+                        value={null}
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                     />
                 </FormControl>
                 <Box flexDirection="column" my={"$5"}>
@@ -80,7 +95,13 @@ const Login = ({ navigation }) => {
                         title="Login"
                         type="text"
                         padding={"$3"}
+<<<<<<< HEAD
                         onPress={() => login()}
+=======
+                        onPress={() => {
+                            navigation.navigate("MainApp");
+                        }}
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                     />
                     <Text size="sm" color="$black" mt={"$4"}>
                         Don't have an account?
@@ -95,6 +116,7 @@ const Login = ({ navigation }) => {
                     />
                 </Box>
             </Box>
+<<<<<<< HEAD
 
             {/* show Alert */}
             {showAlert && (
@@ -106,6 +128,8 @@ const Login = ({ navigation }) => {
                     </Alert>
                 </Modal>
             )}
+=======
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
         </Box>
     );
 };

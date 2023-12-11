@@ -22,6 +22,7 @@ import {
     Center,
     ScrollView,
 } from "@gluestack-ui/themed";
+<<<<<<< HEAD
 import { Button, Input, Pilihan } from "../../components";
 import { addNote, getNote } from "../../actions/AuthAction";
 
@@ -35,11 +36,18 @@ const Add = ({ navigation }) => {
     const [newCategory, setNewCategory] = useState("");
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState("");
+=======
+import { Button, Input, Pilihan } from "../../components/kecil";
+
+const Add = ({ navigation }) => {
+    const [isModalVisible, setIsModalVisible] = useState(false);
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
 
     const toggleModal = () => {
         setIsModalVisible(!isModalVisible);
     };
 
+<<<<<<< HEAD
     const toggleAlert = (message) => {
         setShowAlert(!showAlert);
         setAlertMessage(message);
@@ -97,6 +105,8 @@ const Add = ({ navigation }) => {
         }
     };
 
+=======
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
     return (
         <ScrollView>
             <Box flex={1} backgroundColor="$white">
@@ -109,6 +119,7 @@ const Add = ({ navigation }) => {
                     </Text>
                     <FormControl>
                         <Input label={"Title"} width={"$full"} height={"$10"} onChangeText={(title) => setTitle(title)} />
+<<<<<<< HEAD
                         <Input textarea={true} label="Content" width={"$full"} height={"$32"} onChangeText={(content) => setContent(content)} />
                         <Pilihan label="Status" selectedValue={status} onValueChange={(status) => ubahStatus(status)} />
                         <Pilihan label="Category" selectedValue={category} datas={categoryUser} onValueChange={(selectedCategory) => setCategory(selectedCategory)} />
@@ -121,6 +132,13 @@ const Add = ({ navigation }) => {
                                 onAddNote();
                             }}
                         />
+=======
+                        <Input textarea={true} label="Content" width={"$full"} height={"$32"} onChangeText={() => { }} />
+                        <Pilihan label="Status" />
+                        <Pilihan label="Category" />
+                        <Button type="text" title="Add New Category" onPress={toggleModal} padding={10} />
+                        <Button type="text" title="Save" padding={10} onPress={() => { }} />
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                     </FormControl>
                 </Box>
 
@@ -135,7 +153,11 @@ const Add = ({ navigation }) => {
                         </ModalHeader>
                         <ModalBody>
                             <GlueInput>
+<<<<<<< HEAD
                                 <InputField role="form" placeholder="Category Name" value={newCategory} onChangeText={(text) => setNewCategory(text)} />
+=======
+                                <InputField role="form" placeholder="Category Name" value={null} onChangeText={() => { }} />
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                             </GlueInput>
                         </ModalBody>
                         <ModalFooter>
@@ -145,7 +167,11 @@ const Add = ({ navigation }) => {
                                     p={"$2"}
                                     borderRadius={"$sm"}
                                     alignItems="center"
+<<<<<<< HEAD
                                     onPress={handleAddCategory} // Trigger category addition
+=======
+                                    onPress={() => { }} // Trigger category addition
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
                                 >
                                     <Text color="$white" fontWeight="$bold">
                                         Add
@@ -168,6 +194,7 @@ const Add = ({ navigation }) => {
                         </ModalFooter>
                     </ModalContent>
                 </Modal>
+<<<<<<< HEAD
 
                 {/* show Alert */}
                 {showAlert && (
@@ -179,6 +206,8 @@ const Add = ({ navigation }) => {
                         </Alert>
                     </Modal>
                 )}
+=======
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
             </Box>
         </ScrollView>
     );

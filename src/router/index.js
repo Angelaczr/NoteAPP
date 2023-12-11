@@ -50,4 +50,8 @@ const Router = () => {
     )
 }
 
+<<<<<<< HEAD
 export default Router
+=======
+export default Router
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9

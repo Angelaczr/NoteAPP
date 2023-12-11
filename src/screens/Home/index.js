@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, FlatList } from "@gluestack-ui/themed";
 import { CategoryTab, ListNote } from "../../components";
+<<<<<<< HEAD
 import { getNote } from "../../actions/AuthAction";
 
 const Home = ({ navigation }) => {
@@ -24,6 +25,20 @@ const Home = ({ navigation }) => {
         };
     }, [navigation]);
 
+=======
+
+const Home = ({ navigation }) => {
+    const [userNotes, setUserNotes] = useState([
+        { noteId: 1, title: 'Note 1', content: 'Lorem ipsum...', status: 'Active', category: 'Work' },
+        { noteId: 2, title: 'Note 2', content: 'Lorem ipsum...', status: 'Inactive', category: 'Personal' },
+        { noteId: 3, title: 'Note 3', content: 'Lorem ipsum...', status: 'Active', category: 'Work' },
+        { noteId: 4, title: 'Note 4', content: 'Lorem ipsum...', status: 'Active', category: 'Study' },
+        // Add more dummy notes as needed
+    ]);
+    const [category, setCategory] = useState(['Work', 'Personal', 'Study', 'Others']); // Replace with your desired categories
+    const [selectedCategory, setSelectedCategory] = useState(null);
+
+>>>>>>> 1e328abde00584439eb8728d8300c152e0c68ab9
     const onCategoryPress = (selectedCategory) => {
         setSelectedCategory(selectedCategory);
     };
